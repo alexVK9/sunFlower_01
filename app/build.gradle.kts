@@ -163,7 +163,7 @@ dependencies {
   androidTestImplementation(libs.kotlinx.coroutines.test)
   testImplementation(libs.junit)
 
-  implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+  implementation(platform(libs.firebase.bom))
 }
 
 fun getUnsplashAccess(): String? {

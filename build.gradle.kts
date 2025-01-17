@@ -19,11 +19,13 @@ buildscript {
         google()
         mavenCentral()
     }
+    dependencies {
+        classpath(libs.google.services)
+    }
 }
 
 allprojects {
     repositories {
-
     }
 }
 
@@ -37,8 +39,8 @@ plugins {
     alias(libs.plugins.gradle.versions)
     alias(libs.plugins.version.catalog.update)
     alias(libs.plugins.compose.compiler)
-    id("com.android.library") version "8.1.0" apply false
-    id("com.google.gms.google-services") version "4.3.15" apply false
+    id("com.android.library") version "8.1.4" apply false
+    id("com.google.gms.google-services") version "4.4.2" apply false
 }
 
 apply("${project.rootDir}/buildscripts/toml-updater-config.gradle")
