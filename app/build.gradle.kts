@@ -77,11 +77,13 @@ android {
     dataBinding = true
     buildConfig = true
   }
-  packagingOptions {
-    // Multiple dependency bring these files in. Exclude them to enable
-    // our test APK to build (has no effect on our AARs)
-    resources.excludes += "/META-INF/AL2.0"
-    resources.excludes += "/META-INF/LGPL2.1"
+  packaging {
+    resources {
+      // Multiple dependency bring these files in. Exclude them to enable
+      // our test APK to build (has no effect on our AARs)
+      resources.excludes += "/META-INF/AL2.0"
+      resources.excludes += "/META-INF/LGPL2.1"
+    }
   }
 
   testOptions {
@@ -145,6 +147,9 @@ dependencies {
   implementation(libs.accompanist.systemuicontroller)
   debugImplementation(libs.androidx.compose.ui.tooling)
 
+  implementation(platform(libs.firebase.bom.v3223))
+  implementation(libs.google.firebase.analytics)
+
   // Testing dependencies
   debugImplementation(libs.androidx.monitor)
   kspAndroidTest(libs.hilt.android.compiler)
@@ -163,8 +168,9 @@ dependencies {
   androidTestImplementation(libs.kotlinx.coroutines.test)
   testImplementation(libs.junit)
 
-  implementation(platform(libs.firebase.bom))
 }
+
+
 
 fun getUnsplashAccess(): String? {
   return project.findProperty("unsplash_access_key") as? String

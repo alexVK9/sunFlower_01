@@ -24,7 +24,7 @@ import androidx.activity.enableEdgeToEdge
 import com.google.samples.apps.sunflower.compose.SunflowerApp
 import com.google.samples.apps.sunflower.ui.SunflowerTheme
 import dagger.hilt.android.AndroidEntryPoint
-
+import com.google.firebase.analytics.FirebaseAnalytics
 
 @AndroidEntryPoint
 class GardenActivity : ComponentActivity() {
