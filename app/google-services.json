@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "516296172642",
+    "project_id": "sunflower-prod-observed-g",
+    "storage_bucket": "sunflower-prod-observed-g.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516296172642:android:ef175ae19ef7191563dd3b",
+        "android_client_info": {
+          "package_name": "com.google.samples.apps.sunflower"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkbEOE0Jq26q4ZvXpjIMDGzTulo_Rbdcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -21,6 +21,12 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+
+    }
+}
+
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
@@ -31,6 +37,8 @@ plugins {
     alias(libs.plugins.gradle.versions)
     alias(libs.plugins.version.catalog.update)
     alias(libs.plugins.compose.compiler)
+    id("com.android.library") version "8.1.0" apply false
+    id("com.google.gms.google-services") version "4.3.15" apply false
 }
 
 apply("${project.rootDir}/buildscripts/toml-updater-config.gradle")

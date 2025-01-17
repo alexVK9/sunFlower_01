@@ -20,7 +20,9 @@ plugins {
   alias(libs.plugins.ksp)
   alias(libs.plugins.hilt)
   alias(libs.plugins.compose.compiler)
+  id("com.google.gms.google-services") // Plugin de Firebase
 }
+
 
 android {
   compileSdk = libs.versions.compileSdk.get().toInt()
@@ -160,6 +162,8 @@ dependencies {
   androidTestImplementation(libs.accessibility.test.framework)
   androidTestImplementation(libs.kotlinx.coroutines.test)
   testImplementation(libs.junit)
+
+  implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
 }
 
 fun getUnsplashAccess(): String? {
